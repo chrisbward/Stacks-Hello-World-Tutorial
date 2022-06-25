@@ -8,6 +8,12 @@ clean:
 
 run: start-backend start-fronend
 
+test-backend:
+	@clarinet test
+
+test-backend-watch:
+	@clarinet test --watch
+
 start-backend:
 	yarn run x
 
