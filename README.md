@@ -19,5 +19,10 @@ make quickstart
 
 
 
+## Thanks
+
+Special thank you to unclemantis.btc who kindly took the time to take me through the ecosystem on the Discord server.
+
+
 ## References
 
