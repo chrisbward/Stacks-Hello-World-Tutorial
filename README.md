@@ -9,7 +9,17 @@ A simple Hello World app for the Stacks community. Probably the only one that ac
 The goal of this repository is to act as a resource to give green developers an instant 
 start in development of Stacks apps.
 
+## Goals
 
+- basic hello world app that can explain itself
+- NEVER regresses, should work every. single. time.
+- BDD automated testing with Cypress, Cucumber and Cucumber-preprocessor
+- Unit tests with Jest
+- live reload development with webpack
+- typescript
+- dockerized development environment (vscode devcontainer) w/ clarinet installed
+- make build system
+- basic jenkins build steps
 
 ## Quickstart w/ Docker
 
