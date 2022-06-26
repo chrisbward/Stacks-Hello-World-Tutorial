@@ -1,0 +1,24 @@
+{
+    "testFiles": "**/*.feature",
+    "video": false,
+    "baseUrl": "http://localhost:4040",
+
+    "supportFile": "cypress/support/index.js",
+    "integrationFolder": "cypress/integration",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        },
+        "reporter": "cypress-dashboard",
+        "reporterOptions": {
+            "reportDir": "cypress/reports",
+            "isLocalDeployment": true
+        }
+    }
+}
