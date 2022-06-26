@@ -1,37 +1,39 @@
 # Stacks-Hello-World-Tutorial
 
+LAST KNOWN GOOD BUILD: xx/xx/2022
+
+CURRENTLY WORK-IN-PROGRESS
+
 A simple Hello World app for the Stacks community. Probably the only one that actually works.
 
 The goal of this repository is to act as a resource to give green developers an instant 
 start in development of Stacks apps.
 
+
+
+## Quickstart w/ Docker
+
 ### Requirements
 
-- Docker
-- NodeJS (vx.x.x) TBD
 - Make
-
-### Quickstart
+- Docker
 
 ```
 make quickstart
 ```
 
 
-## DIY - The steps I followed
+## VS Code Devcontainer
 
-First of all, I needed to create the project and hello-world contract with clarinet;
+VS Code should automatically open the repo inside a devcontainer, ./Dockerfile
 
-```
-clarinet new .
-
-clarinet contract new hello-world
+Once the terminal is available, for a live-reload dev environment type;
 
 ```
+make start-frontend
+```
 
-Then I needed to write the smart contract.
-
-
+... and now visit http://localhost:8080 in your browser.
 
 
 
@@ -42,3 +44,5 @@ Special thank you to unclemantis.btc who kindly took the time to take me through
 
 ## References
 
+- https://www.youtube.com/watch?v=zERDftjl6k8 (billboard-message demo)
+- 
