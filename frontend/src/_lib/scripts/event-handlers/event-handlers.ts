@@ -2,17 +2,18 @@ import { userSession, authenticate } from '../lib/stacks/auth';
 
 import { CONTRACT_ADDRESS, CONTRACT_NAME } from "../constants/constants";
 
-var thing = false
+var isAuthenticated = false
 
 
 const authCallback = () => {
-    thing = true
+    isAuthenticated = true
 }
 
 const begin = (event: MouseEvent): void => {
     event.preventDefault();
     // alert('lets go')
     void authenticate(authCallback)
+    console.log('isAuthenticated', isAuthenticated)
     // userSession.signUserOut(window.location.origin);
 }
 const handleSignIn = (event: MouseEvent): void => {
