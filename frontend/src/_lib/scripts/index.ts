@@ -1,5 +1,4 @@
 import * as constants from './constants/constants'
-import styles from "../styles/styles.css"
 import * as EventHandlers from './event-handlers/event-handlers'
 import { userSession } from './lib/stacks/auth';
 import store from './state/store';
@@ -17,6 +16,8 @@ const attachEventHandlers = (): void =>{
 }
 
 const doRender = (): void => {
+
+    document.getElementsByTagName('App')[0].insertAdjacentHTML('afterbegin', template)
     void attachEventHandlers()
 }
 
@@ -37,6 +38,17 @@ const subscribeToState = (store: IStateStore<any>): void => {
     //     // this.setState({ userData: userSession.loadUserData() });
     // }
 }
+
+const template = `
+    <p>A quick test of identity management and storing data!</p>
+    <div class="demoMockForm">
+        <textarea id="textareaMessage" class="hidden" rows="20">
+            Hello world!
+        </textarea>
+        <button id="button_save" class="hidden">Save</button>
+    </div>
+    <button id="button_signin">Sign in via Stacks</button>
+`
 
 const start = (init: any) => {
     subscribeToState(store)
