@@ -55,4 +55,4 @@ Special thank you to unclemantis.btc who kindly took the time to take me through
 ## References
 
 - https://www.youtube.com/watch?v=zERDftjl6k8 (billboard-message demo)
-- 
+- https://dev.to/krgrs/built-on-bitcoin-an-introduction-to-full-stack-web3-development-with-stacks-me9
