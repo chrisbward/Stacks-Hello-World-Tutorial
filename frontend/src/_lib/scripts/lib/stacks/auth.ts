@@ -22,6 +22,7 @@ export const authenticate = (authCallback: Function): void => {
       let sessionData = userSession.store.getSessionData();
       sessionData.userData = userData;
       userSession.store.setSessionData(sessionData);
+      console.log('authed details', userData, sessionData)
       authCallback()
     },
     userSession,
