@@ -11,3 +11,7 @@ const LocalStorageDataStoreAdaptor = (): IDataStoreAdaptor => {
 }
 
 export default LocalStorageDataStoreAdaptor
+
+export type {
+    IDataStoreAdaptor
+}

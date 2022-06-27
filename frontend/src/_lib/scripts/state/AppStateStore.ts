@@ -1,3 +1,4 @@
+import { IDataStoreAdaptor } from "./adaptors/localstorage_basic/adaptor"
 import { IAppState } from "./AppState"
 
 interface IStateSettable<T> {
@@ -13,7 +14,7 @@ interface IStateStore<T> extends IStateSettable<T> {
 const storageEngineAdaptor = "";
 
 
-const AppStateStore = ():IStateStore<IAppState> => {
+const AppStateStore = (adaptor: IDataStoreAdaptor):IStateStore<IAppState> => {
  
     const getFromStore = (key: string): IAppState => {
         return {
@@ -22,7 +23,7 @@ const AppStateStore = ():IStateStore<IAppState> => {
     }
 
     const setInStore: IStateSettable<IAppState> = {
-        set: (string: key, value:IAppState ) => {
+        set: (key : string, value:IAppState ) => {
 
         }
     }
