@@ -41,6 +41,11 @@ const subscribeToState = (store: IStateStore<any>): void => {
 
 const template = `
     <p>A quick test of identity management and storing data!</p>
+    <div class="message">
+        <p>
+            Hello new user!
+        </p>
+    </div>
     <div class="demoMockForm">
         <textarea id="textareaMessage" class="hidden" rows="20">
             Hello world!
@@ -55,4 +60,4 @@ const start = (init: any) => {
     doRender()
 }
 
-start({}) // Let's goooooo
+start({}) // Let's goooooo, this is the entrypoint for the frontend app
