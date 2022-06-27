@@ -9,18 +9,6 @@ A simple Hello World app for the Stacks community. Probably the only one that ac
 The goal of this repository is to act as a resource to give green developers an instant 
 start in development of Stacks apps.
 
-## Goals
-
-- basic hello world app that can explain itself
-- NEVER regresses, should work every. single. time.
-- BDD automated testing with Cypress, Cucumber and Cucumber-preprocessor
-- Unit tests with Jest
-- live reload development with webpack
-- typescript
-- dockerized development environment (vscode devcontainer) w/ clarinet installed
-- make build system
-- basic jenkins build steps
-
 ## Quickstart w/ Docker
 
 ### Requirements
@@ -32,10 +20,23 @@ start in development of Stacks apps.
 make quickstart
 ```
 
+## Goals
+
+- basic hello world app that can explain itself
+- NEVER regresses, should work every. single. time.
+- BDD automated testing with Cypress, Cucumber and Cucumber-preprocessor
+- Unit tests with Jest
+- live reload development with webpack
+- TypeScript, but vanilla, breaking out of React
+- dockerized development environment (vscode devcontainer) w/ clarinet installed (v0.32.0)
+- make build system
+- basic jenkins build steps
+
+
 
 ## VS Code Devcontainer
 
-VS Code should automatically open the repo inside a devcontainer, ./Dockerfile
+If you're using VS Code it will detect and ask to open the repo inside a devcontainer, ./Dockerfile
 
 Once the terminal is available, for a live-reload dev environment type;
 
@@ -46,11 +47,12 @@ make start-frontend
 ... and now visit http://localhost:8080 in your browser.
 
 
-
 ## Thanks
 
 Special thank you to unclemantis.btc who kindly took the time to take me through the ecosystem on the Discord server.
+Many others that didn't run and stepped up; friedger.btc, Hero Gamer, diwaker, kennny, BowTiedDeveloper, will.btc, a.haun
 
+Code sampled from the Todo, extended Todo, Billboard examples
 
 ## References
 
