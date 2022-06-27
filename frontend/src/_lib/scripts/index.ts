@@ -13,7 +13,7 @@ enum Selectors {
  
 const attachEventHandlers = (): void =>{ 
     document.getElementById(Selectors.button_signout)?.addEventListener('click', EventHandlers.handleSignOut)
-    document.getElementById(Selectors.button_getstarted)?.addEventListener('click', EventHandlers.handleSignIn)
+    document.getElementById(Selectors.button_signin)?.addEventListener('click', EventHandlers.handleSignIn)
 }
 
 const doRender = (): void => {

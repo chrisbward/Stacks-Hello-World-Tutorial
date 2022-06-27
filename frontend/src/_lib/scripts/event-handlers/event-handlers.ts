@@ -6,18 +6,17 @@ import LocalStorageDataStoreAdaptor from '../state/adaptors/localstorage_basic/a
 import store from '../state/store';
 
 
-const authCallback = () => {
-    console.log('setting store')
-    store.set("app", {
-        isAuthenticating : true
-    })
-}
-
 const handleSignIn = (event: MouseEvent): void => {
     event.preventDefault();
     // alert('lets go')
 
-    void authenticate(authCallback)
+    void authenticate(() => {
+        console.log('setting store')
+        store.set("app", {
+            isAuthenticating : true
+        })
+    })
+    
     console.log('isAuthenticated', store.get("app").isAuthenticating)
     // userSession.signUserOut(window.location.origin);
 } 
