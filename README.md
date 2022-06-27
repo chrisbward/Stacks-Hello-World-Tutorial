@@ -24,14 +24,13 @@ make quickstart
 
 - basic hello world app that can explain itself
 - NEVER regresses, should work every. single. time.
-- BDD automated testing with Cypress, Cucumber and Cucumber-preprocessor
+- ✅ BDD automated testing with Cypress, Cucumber and Cucumber-preprocessor
+- ✅ live reload development with webpack
+- ✅ TypeScript, but vanilla, breaking out of React
+- ✅ dockerized development environment (vscode devcontainer) w/ clarinet installed (v0.32.0)
+- ✅ make build system
 - Unit tests with Jest
-- live reload development with webpack
-- TypeScript, but vanilla, breaking out of React
-- dockerized development environment (vscode devcontainer) w/ clarinet installed (v0.32.0)
-- make build system
 - basic jenkins build steps
-
 
 
 ## VS Code Devcontainer
