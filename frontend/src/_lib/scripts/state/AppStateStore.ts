@@ -6,7 +6,7 @@ interface IStateSettable<T> {
 }
 interface IStateStore<T> extends IStateSettable<T> { 
     get : (key: string) => T
-    set : IStateSettable<T>
+    set : (key: string, value: T) => void
     validate: () => void
     saveStore: (adaptor: IDataStoreAdaptor) => void 
 }
@@ -22,10 +22,8 @@ const AppStateStore = (adaptor: IDataStoreAdaptor):IStateStore<IAppState> => {
         }
     }
 
-    const setInStore: IStateSettable<IAppState> = {
-        set: (key : string, value:IAppState ) => {
-
-        }
+    const setInStore =  (key : string, value:IAppState ) => {
+        
     }
     
     const saveStore = (adaptor: IDataStoreAdaptor) => {
