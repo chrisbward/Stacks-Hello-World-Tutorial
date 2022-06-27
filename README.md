@@ -1,8 +1,4 @@
-# Stacks-Hello-World-Tutorial
-
-LAST KNOWN GOOD BUILD: xx/xx/2022
-
-CURRENTLY WORK-IN-PROGRESS
+# Stacks-Hello-World-Tutorial WORK-IN-PROGRESS
 
 A simple Hello World app for the Stacks community. Probably the only one that actually works.
 
