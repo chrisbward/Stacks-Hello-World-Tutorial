@@ -1,20 +1,28 @@
 import { AppConfig, UserSession } from '@stacks/auth';
 import { showConnect } from '@stacks/connect';
 import { Person } from '@stacks/profile';
+import { getUsername } from '../../api/stacksApi';
 
 const appConfig = new AppConfig(['store_write']);
 
 export const userSession = new UserSession({ appConfig });
 
-export const authenticate = ():void => {
+export const authenticate = (authCallback: Function): void => {
   showConnect({
     appDetails: {
       name: 'Hello World',
       icon: window.location.origin + '/logo.svg',
     },
     redirectTo: '/',
-    onFinish: () => {
-      window.location.reload();
+    onFinish: async () => {
+      // Workaround for https://github.com/hirosystems/stacks.js/issues/1144
+      const userData = userSession.loadUserData();
+      const username = await getUsername(userData.profile.stxAddress.mainnet);
+      userData.username = username;
+      let sessionData = userSession.store.getSessionData();
+      sessionData.userData = userData;
+      userSession.store.setSessionData(sessionData);
+      authCallback()
     },
     userSession,
   });
